@@ -90,7 +90,7 @@
     <!-- top brand slider section  -->
     <section class="top-brand py-5">
         <div class="container">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel b-slider">
                 <div class="item">
                     <img src="images/brand1.png" alt=" brand logo" class="img-fluid">
                 </div>
@@ -147,11 +147,9 @@
                 </div>
             </div>
             
-
         </div>
     </section>
     <!-- top brand slider section  -->
-
 
     <!-- about section  -->
     <section class="about-section">
@@ -186,10 +184,8 @@
                 <h4 class="py-2">WHAT TO EXPECT</h4>
                 <h2>Core Features</h2>
             </div>
-            <!-- feature inner  -->
-            <div class="row">
-                <!-- our service  -->
-                <div class="col-md-3">
+            <div class="owl-carousel g-slider">
+                <div class="item">
                     <div class="service" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <i class="fas fa-headset orange"></i>
                         <h5 class="py-3">Clint Support</h5>
@@ -197,8 +193,7 @@
                         <a href="#">Explore Service</a>
                     </div>
                 </div>
-                <!-- our service  -->
-                <div class="col-md-3">
+                <div class="item">
                     <div class="service"  data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <i class="fas fa-chart-area red"></i>
                         <h5 class="py-3">Financial Planning</h5>
@@ -206,8 +201,7 @@
                         <a href="#">Explore Service</a>
                     </div>
                 </div>
-                <!-- our service  -->
-                <div class="col-md-3">
+                <div class="item">
                     <div class="service"  data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <i class="fas fa-money-check-alt blue"></i>
                         <h5 class="py-3">Business Analysis</h5>
@@ -215,8 +209,7 @@
                         <a href="#">Explore Service</a>
                     </div>
                 </div>
-                <!-- our service  -->
-                <div class="col-md-3">
+                <div class="item">
                     <div class="service"  data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <i class="fas fa-band-aid green"></i>
                         <h5 class="py-3">Digital Marketing</h5>
@@ -227,7 +220,6 @@
             </div>
         </div>
     </section>
-
 
 
     <!-- quetion and answer section  -->
@@ -455,12 +447,10 @@
 
     <script>
 
-
-        var owl = $('.owl-carousel');
+        // top brand slider 
+        var owl = $('.b-slider');
         owl.owlCarousel({
             loop:true,
-            nav:false,
-            dots:false,
             margin:15,
             responsive:{
                 0:{
@@ -486,8 +476,29 @@
             e.preventDefault();
         });
 
+        // slidr 2
 
+        $('.g-slider').owlCarousel({
+            loop:true,
+            margin:10,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                700:{
+                    items:2,
+                },
+                900:{
+                    items:3,
+                },
+                1100:{
+                    items:4,
+                }
+            }
+        })
 
+        // slidr 2
 
 
         AOS.init();
